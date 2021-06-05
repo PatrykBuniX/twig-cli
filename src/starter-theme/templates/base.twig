@@ -1,0 +1,26 @@
+{% block html_head_container %}
+	{% include 'html-header.twig' %}
+	{% block head %}{% endblock %}
+	</head>
+{% endblock %}
+
+<body>
+<div id="gnbDimmer" class="dimmer"></div>
+
+{% include 'header.twig' %}
+{{ function('wp_head') }}
+
+<div id="content" class="content">
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
+</div>
+
+{% block footer %}
+	{% include 'footer.twig' %}
+	{{ function('wp_footer') }}
+{% endblock %}
+{% block js %}
+{% endblock %}
+<script src="{{site.theme.link}}/static/script.js"></script>
+</body></html>
